@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>States</title>
+</head>
+<body>
+	<header>
+		<h1>A List of Cities</h1>
+	</header>
+
+	<div th:each="state: ${states}">
+		<h2>
+			<a th:href="@{/course(ie=${course.id})}" th:text=${course.name}"></a>
+		</h2>
+	</div>
+
+</body>
+</html>
