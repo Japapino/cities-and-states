@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
 <title>States</title>
 </head>
 <body>
@@ -11,7 +10,7 @@
 
 	<div th:each="state: ${states}">
 		<h2>
-			<a th:href="@{/course(ie=${course.id})}" th:text=${course.name}"></a>
+			<a th:href="@{/course(ie=${state.id})}" th:text=${state.name}"></a>
 		</h2>
 	</div>
 

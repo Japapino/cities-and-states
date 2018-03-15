@@ -1,9 +1,13 @@
 package wcci.citiesandstates;
 
+import java.util.Collection;
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+@Entity
 public class Fish {
 	
 	@Id
@@ -14,15 +18,14 @@ public class Fish {
 	private String imgUrl; 
 	
 	@OneToMany(mappedBy = "fish")
-	public State state; 
+	public Collection<State> state; 
 	
 	public Fish() {}
 	
-	public Fish(String name, String binomial, String imgUrl, State state) {
+	public Fish(String name, String binomial, String imgUrl) {
 		this.name = name; 
 		this.binomial = binomial; 
 		this.imgUrl = imgUrl; 
-		this.state = state; 
 	}
 	
 	public String getName() {
@@ -35,5 +38,9 @@ public class Fish {
 	
 	public String getImgUrl() {
 		return imgUrl; 
+	}
+	
+	public Collection<State> getState() {
+		return state; 
 	}
 }
