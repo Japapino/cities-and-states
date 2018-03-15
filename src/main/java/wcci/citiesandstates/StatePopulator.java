@@ -11,8 +11,6 @@ public class StatePopulator implements CommandLineRunner {
 	@Resource
 	private StateRepository stateRepo;
 	
-	@Resource 
-	private FishRepository fishRepo; 
 	
 	@Resource
 	private CityRepository cityRepo; 
@@ -21,7 +19,6 @@ public class StatePopulator implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		
 		Fish tuna = new Fish("Tuna","Tunacus","URL"); 
-		fishRepo.save(tuna); 
 		
 		City columbus = new City("Columbus",123); 
 		cityRepo.save(columbus); 

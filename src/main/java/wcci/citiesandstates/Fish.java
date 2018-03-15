@@ -2,6 +2,7 @@ package wcci.citiesandstates;
 
 import java.util.Collection;
 
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -9,19 +10,13 @@ import javax.persistence.OneToMany;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@Entity
+@Embeddable
 public class Fish {
 	
-	@Id
-	@GeneratedValue
-	private Long id; 
+
 	private String name; 
 	private String binomial; 
 	private String imgUrl; 
-	
-	@JsonIgnore
-	@OneToMany(mappedBy = "fish")
-	public Collection<State> state; 
 	
 	public Fish() {}
 	
@@ -43,7 +38,4 @@ public class Fish {
 		return imgUrl; 
 	}
 	
-	public Collection<State> getState() {
-		return state; 
-	}
 }
