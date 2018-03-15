@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class City {
 	
@@ -16,6 +18,7 @@ public class City {
 	private String name;
 	private int population; 
 	
+	@JsonIgnore
 	@OneToOne(mappedBy = "city")
 	private State state; 
 	
