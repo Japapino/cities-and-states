@@ -10,7 +10,7 @@
 
 	<div th:each="state: ${states}">
 		<h2>
-			<a th:href="@{/course(ie=${state.id})}" th:text=${state.name}"></a>
+			<a th:href="@{/course(ie=${state.id})}" th:text="${state.name}"></a>
 		</h2>
 	</div>
 

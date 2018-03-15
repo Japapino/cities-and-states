@@ -1,9 +1,13 @@
 package wcci.citiesandstates;
 
+import java.util.Collection;
+
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+@Entity
 public class City {
 	
 	@Id
